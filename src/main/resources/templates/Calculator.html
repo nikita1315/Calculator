@@ -11,7 +11,7 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script type="application/javascript" src="/js/calculator.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-sm">
@@ -20,43 +20,43 @@
                 <div class="card-body">
                     <table class="table table-bordered">
                         <tr>
-                            <th scope="col"><a>1</a></th>
-                            <th scope="col"><a>2</a></th>
-                            <th scope="col"><a>3</a></th>
-                            <th scope="col"><a>C</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(1)">1</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(2)">2</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(3)">3</a></th>
+                            <th scope="col"><a type="button">C</a></th>
                         </tr>
                         <tr>
-                            <th scope="col"><a>4</a></th>
-                            <th scope="col"><a>5</a></th>
-                            <th scope="col"><a>6</a></th>
-                            <th scope="col"><a><--</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(4)">4</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(5)">5</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(6)">6</a></th>
+                            <th scope="col"><a type="button"><--</a></th>
                         </tr>
                         <tr>
-                            <th scope="col"><a>7</a></th>
-                            <th scope="col"><a>8</a></th>
-                            <th scope="col"><a>9</a></th>
-                            <th scope="col"><a>.</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(7)">7</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(8)">8</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(9)">9</a></th>
+                            <th scope="col"><a type="button">.</a></th>
                         </tr>
                         <tr>
-                            <th scope="col"><a>+</a></th>
-                            <th scope="col"><a>0</a></th>
-                            <th scope="col"><a>-</a></th>
-                            <th scope="col"><a>(</a></th>
+                            <th scope="col"><a type="button" onclick="addAction('+')">+</a></th>
+                            <th scope="col"><a type="button" onclick="addNum(0)">0</a></th>
+                            <th scope="col"><a type="button" onclick="addAction('-')">-</a></th>
+                            <th scope="col"><a type="button">()</a></th>
                         </tr>
                         <tr>
-                            <th scope="col"><a>*</a></th>
-                            <th scope="col"><a>/</a></th>
-                            <th scope="col"><a>=</a></th>
-                            <th scope="col"><a>)</a></th>
+                            <th scope="col"><a type="button" onclick="addAction('*')">*</a></th>
+                            <th scope="col"><a type="button" onclick="addAction('/')">/</a></th>
+                            <th scope="col"><a type="button" onclick="doThing()">=</a></th>
+                            <th scope="col"><a type="button">--></a></th>
                         </tr>
                     </table>
 
                     <table class="table table-bordered">
                         <tr>
-                            <th scope="col"><a>sin</a></th>
-                            <th scope="col"><a>cos</a></th>
-                            <th scope="col"><a>tn</a></th>
-                            <th scope="col"><a>cot</a></th>
+                            <th scope="col"><a type="button">sin</a></th>
+                            <th scope="col"><a type="button">cos</a></th>
+                            <th scope="col"><a type="button">tn</a></th>
+                            <th scope="col"><a type="button">cot</a></th>
 
                         </tr>
                         <tr>
@@ -72,7 +72,9 @@
         </div>
         <div class="col-sm">
             <div>
-                <input id="screen" class="border border-secondary" readonly>
+                <input id="screen1" class="border border-secondary" readonly>
+                <input id="screen2" class="border border-secondary" readonly>
+                <input id="screen3" class="border border-secondary" readonly>
             </div>
 
             <div id ="choose" scrolling="yes">

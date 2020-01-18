@@ -4,11 +4,25 @@
 
 
 }
-#screen{
+#screen1{
 
     margin-top: 25px;
 
-    width: 500px;
+    width: 150px;
+
+}
+#screen2{
+
+    margin-top: 25px;
+
+    width: 150px;
+
+}
+#screen3{
+
+    margin-top: 25px;
+
+    width: 150px;
 
 }
 #choose{

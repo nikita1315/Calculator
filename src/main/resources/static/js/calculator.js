@@ -1,6 +1,8 @@
 function doThing() {
-     var operation =$("#screen2").val();
-     var mas  = [$("screen1").val,$("screen3").val];
+     let operation = $("#screen2").val();
+     let mas  = [];
+     mas.push( $("#screen1").val());
+    mas.push( $("#screen3").val());
 
         jsonData = {
         "action": operation,
@@ -24,8 +26,11 @@ function doThing() {
 
 }
 
+
+
+let count = true;
 function addNum(number) {
-   let count = true;
+
    if(count === true) {
        $("#screen1").val($("#screen1").val() + number);
 
@@ -35,5 +40,6 @@ function addNum(number) {
 }
 
 function addAction(action) {
+    count = false;
     $("#screen2").val(action);
 }
